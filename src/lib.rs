@@ -1028,12 +1028,6 @@ fn run(cmd: &mut Command, program: &str) {
         }
         Err(e) => fail(&format!("failed to execute command: {}", e)),
     };
-    if !status.success() {
-        fail(&format!(
-            "command did not execute successfully, got: {}",
-            status
-        ));
-    }
 }
 
 fn find_exe(path: &Path) -> PathBuf {
